@@ -1,8 +1,3 @@
-# SSSF-week2
-How to run:
+# SSSF-Assignment
 
-`npm install`
-
-`npm run watch` or `node server.js`
-
-Open localhost:3000 in browser# SSSF-Assignment
+Server side scripting framework assignment.
