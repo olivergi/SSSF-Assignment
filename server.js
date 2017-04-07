@@ -1,3 +1,4 @@
+'use strict';
 const express = require('express');
 const path = require('path');
 const multer = require('multer');
@@ -100,6 +101,6 @@ app.use('/new', (req, res, next) => {
 
 // convert GPS coordinates to GoogleMaps format
 const gpsToDecimal = (gpsData, hem) => {
-    let d = parseFloat(gpsData[0]) + parseFloat(gpsData[1] / 60) + parseFloat(gpsData[2] / 3600);
+    const d = parseFloat(gpsData[0]) + parseFloat(gpsData[1] / 60) + parseFloat(gpsData[2] / 3600);
     return (hem === 'S' || hem === 'W') ? d *= -1 : d;
 };
