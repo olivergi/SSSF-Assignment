@@ -101,6 +101,6 @@ app.use('/new', (req, res, next) => {
 
 // convert GPS coordinates to GoogleMaps format
 const gpsToDecimal = (gpsData, hem) => {
-    const d = parseFloat(gpsData[0]) + parseFloat(gpsData[1] / 60) + parseFloat(gpsData[2] / 3600);
+    let d = parseFloat(gpsData[0]) + parseFloat(gpsData[1] / 60) + parseFloat(gpsData[2] / 3600);
     return (hem === 'S' || hem === 'W') ? d *= -1 : d;
 };
